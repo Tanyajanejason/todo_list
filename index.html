@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LemonBiscuit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="egg-menu-wrap" id="egg-menu-wrap">
+    <button id="egg-toggle" class="egg-btn" aria-label="Open settings">:)</button>
+    <div class="egg-menu" id="egg-menu" role="menu">
+      <button id="daily-reset-toggle" aria-label="Toggle daily reset">daily reset: on</button>
+      <button id="recover-btn" aria-label="Recover previous data">recover previous data</button>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="container">
+      <div class="brand">lemon biscuit</div>
+
+      <div class="entry">
+        <input
+          id="task-input"
+          type="text"
+          placeholder="what's cooking today?"
+          autocomplete="off"
+          maxlength="280"
+        />
+      </div>
+
+      <div class="columns">
+        <div class="section">
+          <div class="section-label">Cooking</div>
+          <ul class="list" id="cooking-list"></ul>
+        </div>
+
+        <div class="section">
+          <div class="section-label">Ateee</div>
+          <ul class="list" id="ateee-list"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="achievements.html" class="corner-btn" aria-label="Open achievements">^_^</a>
+
+  <script src="js/storage.js"></script>
+  <script src="js/dateReset.js"></script>
+  <script src="js/today.js"></script>
+  <script src="js/easterEgg.js"></script>
+</body>
+</html>
