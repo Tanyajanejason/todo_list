@@ -124,7 +124,7 @@ body {
 
 .item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
   padding: 2px 2px;
   position: relative;
@@ -133,7 +133,8 @@ body {
 .item-bullet {
   color: var(--text-dim);
   font-size: 16px;
-  line-height: 1;
+  line-height: 22.5px; /* matches the text's line height so the bullet sits on the first line */
+  padding-top: 2px;
   flex-shrink: 0;
   user-select: none;
 }
@@ -141,9 +142,9 @@ body {
 .item-text {
   flex: 1;
   min-width: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  padding-top: 2px;
+  white-space: normal;
+  overflow-wrap: anywhere; /* wrap long words / URLs instead of overflowing */
   color: var(--text);
 }
 
@@ -255,7 +256,7 @@ body {
 .item-checkmark {
   position: absolute;
   right: 34px;
-  top: 50%;
+  top: 15px; /* aligned with the first line of text */
   transform: translateY(-50%) scale(0.5);
   opacity: 0;
   color: var(--text);
